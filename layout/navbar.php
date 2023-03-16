@@ -2,7 +2,7 @@
 
 ?>
 
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-info mb-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

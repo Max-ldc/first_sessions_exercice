@@ -19,25 +19,24 @@ if (!empty($_POST) && isset($_POST['login']) && isset($_POST['password'])){
     $user = $stmt->fetch();
     
     if ($user === false) {
-        $connexionStatus = '<span class="text-danger">Utilisateur ou mot de passe invalide</span>';
+        $connexionStatus = '<span class="text-danger m-3">Utilisateur ou mot de passe invalide</span>';
     } else {
-        $connexionStatus = '<span class="text-success">Authentification réussie</span>';
+        $connexionStatus = '<span class="text-success m-3">Authentification réussie</span>';
         $_SESSION['user'] = $user['login'];
-        header("refresh:3;url=index.php");  // Renvoie à l'index au bout de 3 secondes
+        header("refresh:2;url=index.php");  // Renvoie à l'index au bout de 2 secondes
     }
 }
 require_once 'layout/header.php';
 ?>
 
-<h1>Connexion</h1>
-<form method="post">
+<h1 class="m-3">Connexion</h1>
+<form method="post" class="m-3">
     <input type="text" name="login" placeholder="Identifiant">
     <input type="password" name="password" placeholder="Mot de passe">
     <input type="submit" value="Connexion">
 </form>
 <?php 
-    $msg = $connexionStatus ?? '';
-    echo $msg;
+    echo $connexionStatus ?? '';
 ?>
 
 <?php
