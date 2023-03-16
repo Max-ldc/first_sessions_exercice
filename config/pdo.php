@@ -27,16 +27,3 @@ try {
 } catch (PDOException $e) {
     die('Une erreur est survenue : ' . $e->getCode() . ' - ' . $e->getMessage());
 }
-
-// $statement = $pdo->query("SELECT * FROM products");
-
-//fetchAll retourne un tableau de tous les éléments
-// var_dump($statement->fetchAll(PDO::FETCH_ASSOC));
-
-//fetch retourne un tableau associatif contenant la ligne suivante
-// var_dump($statement->fetch(PDO::FETCH_ASSOC));
-
-// Tant qu'il y a des lignes on reste dans le while et on echo le nom du produit. Quand il n'y a plus de ligne, fetch renvoie false, donc on sort de la boucle while
-// while ($row = $statement->fetch()) {
-//     echo $row['name'] . "<br/>";
-// }

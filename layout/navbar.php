@@ -10,7 +10,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Lien navbar en fonction de la connexion ou non -->
+                <!-- Liens navbar en fonction de la connexion ou non -->
                 <?php if (!empty($_SESSION)) { ?>
                 <li class="nav-item">
                     <a href="admin.php" class="nav-link">Administration</a>

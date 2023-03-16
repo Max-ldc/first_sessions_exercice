@@ -22,7 +22,8 @@ if (!empty($_POST) && isset($_POST['login']) && isset($_POST['password'])){
         $connexionStatus = '<span class="text-danger">Utilisateur ou mot de passe invalide</span>';
     } else {
         $connexionStatus = '<span class="text-success">Authentification réussie</span>';
-        $_SESSION['connected'] = true;
+        $_SESSION['user'] = $user['login'];
+        header("refresh:3;url=index.php");  // Renvoie à l'index au bout de 3 secondes
     }
 }
 require_once 'layout/header.php';
